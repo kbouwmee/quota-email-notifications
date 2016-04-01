@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Script async="false" continueOnError="false" enabled="true" name="Quota-Notification">
+    <DisplayName>Quota Notification</DisplayName>
+    <Properties/>
+    <ResourceURL>py://Python-1.py</ResourceURL>
+    <IncludeURL>py://config.py</IncludeURL>
+    <IncludeURL>py://email.py</IncludeURL>
+</Script>

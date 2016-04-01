@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="3" name="Email">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1455473741536</CreatedAt>
+    <CreatedBy>kbouwmeester@apigee.com</CreatedBy>
+    <DisplayName>Email</DisplayName>
+    <LastModifiedAt>1456414941027</LastModifiedAt>
+    <LastModifiedBy>kbouwmeester@apigee.com</LastModifiedBy>
+    <Policies>
+        <Policy>Assign-Payload</Policy>
+        <Policy>Quota-Notification</Policy>
+        <Policy>impose-quota</Policy>
+        <Policy>remove-query-param-apikey</Policy>
+        <Policy>verify-api-key</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>py://Python-1.py</Resource>
+        <Resource>py://config.py</Resource>
+        <Resource>py://email.py</Resource>
+    </Resources>
+    <TargetServers/>
+    <TargetEndpoints/>
+    <validate>false</validate>
+</APIProxy>

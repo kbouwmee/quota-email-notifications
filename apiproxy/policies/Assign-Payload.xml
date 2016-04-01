@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="Assign-Payload">
+    <DisplayName>Assign Payload</DisplayName>
+    <Properties/>
+    <Set>
+        <Payload contentType="application/json" variablePrefix="@" variableSuffix="#">
+            {
+                "status": "success", 
+                "quota_count": @ratelimit.impose-quota.used.count#,
+                "email_to": @email.to#,
+                "email_sent": @email.sent#,
+                "email_msg": @email.msg#
+            }
+        </Payload>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>
